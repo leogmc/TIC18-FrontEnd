@@ -1,0 +1,19 @@
+@media (max-width:772px){
+    body{
+        background-color: gray;
+    }
+    
+}
+
+@media (min-width:773px) and (max-width:1100px){
+    body{
+        background-color:bisque;
+    }
+    
+}
+
+@media (min-width:1101px){
+    body{
+        background-color:blueviolet;
+    }
+}

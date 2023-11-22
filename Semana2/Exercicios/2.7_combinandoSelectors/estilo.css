@@ -1,0 +1,27 @@
+h2, h5{
+    color: orange;
+}
+
+.Roupas{
+    color: blue;
+}
+
+.alimentos{
+    color: aqua;
+}
+
+.moveis{
+    color: blueviolet;
+}
+
+li{
+    color: red;
+}
+
+.lista .usada{
+    color:purple
+}
+
+.moveis .usada{
+    color: greenyellow
+}

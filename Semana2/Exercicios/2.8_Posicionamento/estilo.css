@@ -1,0 +1,31 @@
+#caixa{
+    background-color: blue;
+    margin: 10px;
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+#caixa2{
+    background-color: blue;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+#caixa5{
+    border: solid;
+    position: fixed;
+    padding:0px 300px 0px 0px
+
+}
