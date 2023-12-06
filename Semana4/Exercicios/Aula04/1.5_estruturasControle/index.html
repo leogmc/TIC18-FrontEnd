@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrutura de controle</title>
+</head>
+<body>
+    <form id="numberForm">
+        <input type="number" id="inputNumero" required>
+        <button type="submit">Checar o número</button>
+    </form>
+
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+            let numero = document.getElementById('inputNumero').value;
+
+            if (numero > 100) {
+                alert("O numero " + numero + " é maior que 100");
+            } else if(numero > 10) {  
+                alert("O numero " + numero + " é maior que 10");
+            } else {
+                alert("O numero " + numero + " é menor ou igual a 10");
+            }       
+        });
+    </script>
+</body>
+</html>

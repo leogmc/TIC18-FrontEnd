@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="estilo.css">
+    <title>1.1_Introdução</title>
+</head>
+<body>
+    <button class="roteiro-comprar" id="botao">Jogador</button>
+   
+   <script>
+            const botao = document.querySelector("button");
+
+            botao.addEventListener("click", atualizarNome);
+
+            function atualizarNome() {
+                var nome = prompt("Insira um novo nome");
+                botao.textContent = "Seja bem vindo Sr: " + nome;
+            }
+    </script>
+</body>
+</html>

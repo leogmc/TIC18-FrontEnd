@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WW2 Fighter Planes</title>
+</head>
+<body>
+    <h1> Caças da segunda guerra mundial</h1>
+    <input type="text" id="indexInput" placeholder="Entre com o índice">
+    <button id="showPlaneButton">Mostre o Avião</button>
+    <p id="output"></p>
+    <div id="containerLista"></div>
+    
+    <script>
+        let cacasWW2 = [ "Supermarine Spitfire",
+                         "P-51 Mustang",
+                         "Messerschmitt Bf 109",
+                         "Focke-Wulf Fw 190",
+                         "Yak-3",
+                         "A6M Zero"];
+
+        cacasWW2.unshift("P47 Thunderbolt");
+
+        let indiceP47 = cacasWW2.indexOf("P47 Thunderbolt");
+
+
+        cacasWW2.splice(indiceP47, 3);
+
+        let cacas = cacasWW2.slice();
+
+        function geraListaHTML(array) {
+            let html = "<ol>";
+            for (let i = 0; i < array.length; i++) {
+                html += "<li>" + array[i] + "</li>";
+            }
+            html += "</ol>";
+            return html;
+        }
+        document.getElementById('containerLista').innerHTML = geraListaHTML(cacas);
+        
+        document.getElementById('showPlaneButton').addEventListener('click', function() {
+            let indice = document.getElementById('indexInput').value;
+            if (indice >= 0 && indice < cacasWW2.length) {
+                document.getElementById('output').textContent = cacasWW2[indice];
+            } else {
+                document.getElementById('output').textContent = "Índice inválido";
+            }
+        });
+        
+    </script>
+
+
+</body>
+</html>

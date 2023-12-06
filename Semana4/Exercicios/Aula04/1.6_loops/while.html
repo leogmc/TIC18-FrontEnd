@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geradores de números aleatórios</title>
+</head>
+<body>
+    <form id="formNumero">
+        <label for="inputNumero">Quantos números aleatórios você quer gerar?</label>
+        <br/>
+        <input type="number" id="inputNumero" min="1" required>
+        <button type="submit">Gerar número!</button>
+    </form>
+
+    <div id="numeros"></div>
+
+    <script>
+        document.getElementById('formNumero').addEventListener('submit', function(event) {
+
+            //No contexto do evento da submissao do formulario, 
+            //a ação default é enviar os dados do form para o servidor
+            //e entao recarregar a página. Se o event.preventDefault() for chamado
+            // isso irá parar a ação e os dados não serão enviados para o servidor.
+            event.preventDefault();
+
+            var contador = document.getElementById('inputNumero').value;
+            
+            //pega o div id="numeros"
+            var numbersDiv = document.getElementById('numeros');
+            
+            numbersDiv.innerHTML = '';
+
+            let i = 0;
+            while (i < contador) {
+                var numeroAleatorio = Math.floor(Math.random() * 20) + 1;
+                numbersDiv.innerHTML += '<p>' + numeroAleatorio + '</p>';
+                i++;
+            }
+        });
+    </script>
+</body>
+</html>

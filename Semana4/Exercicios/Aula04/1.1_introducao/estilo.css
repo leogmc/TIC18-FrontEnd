@@ -1,0 +1,9 @@
+.roteiro-comprar{
+    border-radius: 10px;
+    color: white;
+    padding: 8px;
+    border:none;
+    background-color: rgb(143, 214, 35);
+    display: block;
+    margin: auto;
+}

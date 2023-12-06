@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Funções</title>
+</head>
+<body>
+
+    <form id="formularioNumero">
+        <label for="inputNumero">Digite um número:</label><br/>
+        <input type="number" id="inputNumero" required>
+        <br/>
+        <button type="submit">Adiciona um número</button>
+    </form>
+
+    <button id="botaoRemover">Remove um número</button>
+
+    <ul id="listaNumero"></ul>
+
+    <script>
+        var listaNumero = document.getElementById('listaNumero');
+        var botaoRemover = document.getElementById('botaoRemover');
+    
+        document.getElementById('formularioNumero').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var numero = document.getElementById('inputNumero').value;
+            var listItem = document.createElement('li');
+            listItem.textContent = numero;
+            listaNumero.appendChild(listItem);
+        });
+    
+        botaoRemover.addEventListener('click', function() {
+            if (listaNumero.hasChildNodes()) {
+                listaNumero.removeChild(listaNumero.lastChild);
+            }
+        });
+    </script>
+    
+</body>
+</html>

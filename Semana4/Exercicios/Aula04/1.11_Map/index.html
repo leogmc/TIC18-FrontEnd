@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WW2 Fighter Planes</title>
+</head>
+<body>
+    
+    <script>
+        class Aviao {
+
+            static count = 0;
+
+            constructor(nome, modelo, topSpeed, alcance, motores, fabricante, preco) {
+                this.nome = nome;
+                this._modelo = modelo;
+                this.topSpeed = topSpeed;
+                this.alcance = alcance;
+                this.motores = motores;
+                this.fabricante = fabricante;
+                this.preco = preco;
+                Aviao.count++;
+
+            }
+
+            display() {
+                return this.nome + ", " + this.modelo + ", " + this.topSpeed + ", "
+                 + this.alcance + ", " + this.motores + ", " + this.fabricante + ", "
+                + this.preco;
+            }
+
+            static getAvioesDoHangar(){
+                return Aviao.count;
+            }
+
+            get modelo() {
+                return this._modelo;
+            }
+        }
+
+        let p51 = new Aviao("P-51 Mustang", "Mk II", 703, 1646, 1, "North American Aviation", 50000);
+        
+        //converte o objeto Aviao p51 em um Map
+        let p51Map = new Map(Object.entries(p51));
+
+        function createTable(map) {
+            let table = document.createElement('table');
+            
+            for (let [key, value] of map) {
+
+                let row = document.createElement('tr');
+                let keyCell = document.createElement('td');
+                let valueCell = document.createElement('td');
+                keyCell.textContent = key;
+                valueCell.textContent = value;
+                row.appendChild(keyCell);
+                row.appendChild(valueCell);
+                table.appendChild(row);
+
+            }
+            return table;
+        }
+
+        document.body.appendChild(createTable(p51Map));
+       
+
+        
+        
+    </script>
+
+
+</body>
+</html>

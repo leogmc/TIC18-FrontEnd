@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de variáveis</title>
+</head>
+<body>
+    <script>
+        alert(saudacao);
+        var saudacao = "Olá todo mundo!";
+
+        alert(saudacao2);
+        let saudacao2 = "Olá todo mundo 2!"; //reference error
+
+        const numeroIP = "127.0.0.1";
+        numeroIP = "192.168.0.13"; //erro
+
+        function teste(saudacao, saudacao2){
+            var testeDentroFuncao = "teste dentro da funcao";
+            alert(saudacao);
+            alert(saudacao2);
+        }
+
+        alert(testeDentroFuncao); //erro
+
+        teste("Olá", "Olá2");
+
+        function teste2(){
+            let numeroIP = "192.168.0.15"; //ok, pois está em outro escopo
+            alert(numeroIP);
+        }
+
+        teste2();
+
+    </script>
+
+     
+</body>
+</html>

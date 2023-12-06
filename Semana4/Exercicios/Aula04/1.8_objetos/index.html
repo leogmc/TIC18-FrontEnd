@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características do avião</title>
+</head>
+<body>
+    <ul id="planeFeatures"></ul>
+
+    <script>
+        // Objeto avião
+
+
+        var aviao = {
+            Modelo: "Boeing 747",
+            Capacidade: 350,
+            Alcance: "13500 KM",
+            VelocidadeMax: "988 km/h",
+            Motores: 4
+        };
+
+        var p51 = new Object();
+        p51.modelo = "P51 Mustang";
+        p51.capacidade = 1;
+        p51.alcance = "1.600 km";
+        p51.velocidadeMax = "703 km/h";
+        p51.motores = 1;
+
+        var spitfire = {
+            modelo: "Supermarine Spitfire",
+            capacidade: 1,
+            alcance: "1,135 km",
+            velocidadeMax: "594 km/h",
+            motores: 1
+        };
+
+        // Função para criar uma lista de características do avião	
+        function criaLista(plane) {
+            var lista = document.getElementById('planeFeatures');
+            for (var feature in plane) {
+                var listItem = document.createElement('li');
+                listItem.textContent = feature + ": " + plane[feature];
+                lista.appendChild(listItem);
+            }
+            var hr = document.createElement('hr');
+            lista.appendChild(hr);
+        }
+
+        // Use a função para criar a lista de características do avião
+        criaLista(aviao);
+        criaLista(p51);
+        criaLista(spitfire);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="meuDiv" class="classeTeste" style="color:blue;">Hello World!</div>
+
+    <ul id="listaDeAtributos"></ul>
+
+    <script>
+        //Função para imprimir todos os atributos de um elemento HTML.
+        function imprimeAtributos(idDoElemento) {
+            var elemento = document.getElementById(idDoElemento);
+            var atributos = elemento.attributes;
+
+            for (var i = 0; i < atributos.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = "-->" + atributos[i].name + ": " + atributos[i].value + "";
+                listaDeAtributos.appendChild(listItem);
+            }
+        }
+    
+        // Função para calcular a soma de todos os elementos de um array.	
+        function calculaSoma(array) {
+            var soma = 0;
+            for (var i = 0; i < array.length; i++) {
+                soma += array[i];
+            }
+            return soma;
+        }
+        //chama a função imprimeAtributos e passa o div meuDiv como parametro
+        imprimeAtributos('meuDiv');
+        var numeros = [12, 12, 32, 14, 25];
+        alert(calculaSoma(numeros));
+
+    </script>
+</body>
+</html>

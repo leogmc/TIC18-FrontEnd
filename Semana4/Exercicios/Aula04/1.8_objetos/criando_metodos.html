@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função construtora</title>
+</head>
+<body>
+    <ul id="planeFeatures"></ul>
+</body>
+<script>
+
+    // funcao construtora de Aviao
+    function Aviao(modelo, capacidade, alcance, velocidadeMax, motores) {
+        this.modelo = modelo;
+        this.capacidade = capacidade;
+        this.alcance = alcance;
+        this.velocidadeMax = velocidadeMax;
+        this.motores = motores;
+        this.voar = voar;
+    }
+
+    // Cria 3 objetos Aviao usando a função construtora
+    var boing747 = new Aviao("Boeing 747", 350, "13500 KM", "988 km/h", 4);
+    var spitfire = new Aviao("Supermarine Spitfire", 1, "1,135 km", "594 km/h", 1);
+    var mustang = new Aviao("P-51 Mustang", 1, "2,656 km", "703 km/h", 1);
+
+
+
+    // Função para criar uma lista de características do avião	
+    function criaLista(plane) {
+        var lista = document.getElementById('planeFeatures');
+        for (var feature in plane) {
+            if(feature != "voar"){
+                var listItem = document.createElement('li');
+                listItem.textContent = feature + ": " + plane[feature];
+                lista.appendChild(listItem);
+            }
+        }
+        var hr = document.createElement('hr');
+        lista.appendChild(hr);
+    }
+
+    // Adiciona o metodo voar ao prototype do objeto Aviao
+    function voar() {
+        return this.modelo + " está voando a uma velocidade máxima de: " + this.velocidadeMax;
+    };
+
+    this.voar = voar;
+
+    // Use a função para criar a lista de características do avião
+    criaLista(boing747);
+    criaLista(spitfire);
+    criaLista(mustang);
+
+    alert(boing747.voar());
+
+
+
+</script>
+</html>

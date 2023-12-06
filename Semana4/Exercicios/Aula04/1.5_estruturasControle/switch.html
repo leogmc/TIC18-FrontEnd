@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Muda cor</title>
+</head>
+<body>
+
+    <form id="formCor">
+        <select id="selecionaCor">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <button type="submit">Troca Cor</button>
+    </form>
+
+    <script>
+        document.getElementById('formCor').addEventListener('submit', function(event) {
+            
+            //No contexto do evento da submissao do formulario, 
+            //a ação default é enviar os dados do form para o servidor
+            //e entao recarregar a página. Se o event.preventDefault() for chamado
+            // isso irá parar a ação e os dados não serão enviados para o servidor.
+            event.preventDefault();
+            
+            var cor = document.getElementById('selecionaCor').value;
+
+            switch(cor) {
+                case 'red':
+                    document.body.style.backgroundColor = 'red';
+                    break;
+                case 'blue':
+                    document.body.style.backgroundColor = 'blue';
+                    break;
+                case 'green':
+                    document.body.style.backgroundColor = 'green';
+                    break;
+                default:
+                    document.body.style.backgroundColor = 'white';
+            }
+        });
+    </script>
+</body>
+</html>
