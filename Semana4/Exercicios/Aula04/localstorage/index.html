@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Entre com uma tarefa">
+    <button type="submit">Adicione</button>
+</form>
+<ul id="taskList"></ul>
+
+<script>
+
+class Task {
+    constructor(description) {
+        this.description = description;
+    }
+}
+
+document.getElementById('taskForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let taskInput = document.getElementById('taskInput');
+    let task = new Task(taskInput.value);
+    taskInput.value = '';
+    addTaskToDOM(task);
+    addTaskToStorage(task);
+});
+
+function addTaskToDOM(task) {
+    let taskItem = document.createElement('li');
+    taskItem.textContent = task.description;
+
+    document.getElementById('taskList').appendChild(taskItem);
+}
+
+function addTaskToStorage(task) {
+    let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+    tarefas.push(task);
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
+
+function removeTaskFromStorage(task) {
+    let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+    tarefas.splice(tarefas.indexOf(tarefas), 1);
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
+
+//function LimpandoStorage(){
+  //  localStorage.clear();
+//}
+
+function loadTasksFromStorage() {
+    let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+    tarefas.forEach(tarefa => addTaskToDOM(tarefa));
+}
+
+loadTasksFromStorage();
+//LimpandoStorage();
+</script>
+</body>
+</html>
