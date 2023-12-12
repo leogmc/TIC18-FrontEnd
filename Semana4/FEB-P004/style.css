@@ -1,0 +1,236 @@
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    background-color: rgb(59, 179, 99);
+    font-family: 'Courgette', cursive;
+    font-size: large;        
+  }
+  
+ 
+  hr {
+    width: 100%; /* Garantindo que a linha ocupe toda a largura do contêiner */
+    height: 20px; /* Diminuindo a altura para torná-la mais visível */
+    margin: 0; /* Removendo margens padrão */
+    border: none; /* Removendo a borda padrão */
+    background-color:antiquewhite
+  }
+
+.destinos{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.destino{
+    display: flex;
+    width: 35%;
+    max-width: 200px;
+    min-width: 180px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 30px;
+    background-color: rgb(179, 255, 204);
+    color: rgb(8, 80, 32);
+    font-family: 'Montserrat', sans-serif;
+    cursor: default;
+
+}
+
+.foto{
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 150px;
+  height: 100px;
+}
+
+.check{
+    list-style:none;
+    font-size: 12px;
+    padding-right: 35px;
+
+}
+
+.check li{
+    padding-left: 30px; /* Espaçamento para a imagem */
+    padding-bottom: 15px; 
+    background-image: url(./assets/checkmark.png); 
+    background-repeat: no-repeat; /* Evita repetição da imagem */ 
+}
+
+.preco{
+    margin-top: auto;
+}
+
+h5{
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.taxa{
+    margin-bottom: auto;
+
+}
+
+.botao{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(59, 179, 99);
+    color: rgb(253, 253, 253);
+    cursor: pointer;
+    transition-property: width;
+    transition-duration: 0.5s;
+    box-shadow: 2px 2px rgb(34, 141, 70);
+}
+
+.botao:hover{
+    width: 130px;
+    background-color: rgb(8, 80, 32);
+    
+}
+
+.botao:active{
+    
+    transform: translate(0px,2px);
+}
+
+.footer{
+    background-color:rgb(59, 179, 99);
+    color: antiquewhite;
+    font-family: 'Playfair Display', serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*Configurações do formulário*/
+
+.formulario{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+
+}
+
+
+.form{
+    display: flex; 
+    width: 50%;  
+    max-width: 300px;
+    min-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: rgb(179, 255, 204);
+    color: rgb(8, 80, 32);
+    font-family: 'Montserrat', sans-serif;
+    cursor: default;
+}
+
+input{
+    border-color: rgb(34, 141, 70);
+    border-style:solid;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.x{
+    display: flex;
+    width: 35%;
+    max-width: 300px;
+    min-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    background-color: rgb(179, 255, 204);
+    color: rgb(8, 80, 32);
+    font-family: 'Montserrat', sans-serif;
+    cursor: default;
+
+}
+
+
+
+/* Estilos para telas menores que 1200px */
+@media screen and (max-width: 1200px){
+
+    .destinos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .destino{
+        margin-bottom: 20px;
+    }
+
+  
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Crimson+Text&family=Dancing+Script&family=Hind&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+        <h1 class="title">Cadastro de destino</h1>
+        <hr>
+    </div>
+
+    <div class="formulario">
+        <form class="form" id="formulario">
+        <label for="imagem">Imagem do destino:</label><br>
+        <input type="url" id="imagem" name="imagem"><br>
+      
+        <label for="titulo">Titulo do destino:</label><br>
+        <input type="text" id="titulo" name="titulo"><br>
+   
+        <div class="tipo">
+        <input type="radio" id="ida" name="tipo" value="Áereo ida">
+        <label for="ida">Áereo ida</label>
+        <br>
+        <input type="radio" id="ida e volta" name="tipo" value="Áereo ida e volta">
+        <label for="idaevolta">Áereo ida e volta</label><br>
+        <br>
+        </div>
+        
+        <label for="diaria">Quantidade de diárias:</label><br>
+        <input type="number" id="diaria" name="diaria">
+       
+        <br>
+        <label for="adicional">Adicionais:</label><br>
+        <input type="text" id="adicional" name="adicional"><br>
+    
+
+        <label for="preco">Valor da passagem (R$):</label><br>
+        <input type="text" id="preco" name="preco">
+        <br>
+
+        <div class="taxa">
+        <label for="taxa">Taxas inclusas?</label><br>
+        <br>
+        <input type="radio" id="sim" name="taxa" value="Taxas Inclusas">
+        <label for="sim">Sim</label>
+     
+        <input type="radio" id="nao" name="taxa" value="Taxas não Inclusas">
+        <label for="nao">Não</label>
+        <br>
+        </div>
+
+        <br>
+        <label for="parcela">Parcelamento (Até 10x):</label><br>
+        <input type="number" id="parcela" name="parcela">
+        <br>
+        <br>
+        <button class="botao"> Inserir </button>
+        
+        </form>
+
+        <hr>
+        
+        <div id="destinos">
+
+        </div>
+
+
+
+
+
+    </div>
+    
+
+<script src="index.js" charset="UTF-8"></script>
+</body>
+</html>
