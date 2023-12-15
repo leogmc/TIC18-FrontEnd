@@ -1,0 +1,227 @@
+
+.site {
+   
+   background-color:brown;
+   color:brown;
+   display: grid;
+   grid-template-columns: 1fr 1fr 20%;
+   grid-template-rows: 100px 400px 300px 50px;
+   
+}
+
+.head {
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: antiquewhite;
+    font-family: 'Crimson Text', serif;
+    grid-area: 1 / 1 / 1 / 4 ;
+    padding-left: 20%;
+          
+}
+
+hr{
+    border: none;
+    height: 3px;
+    background-color:rgb(234, 198, 154)
+}
+
+
+.logo_uesc{
+    padding-right: 70%;
+    max-width: 80px;
+    max-height: 80px;
+
+}
+
+.menu {
+
+    flex-direction: column;
+    padding: 15px 15px ;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: antiquewhite;
+    font-family: 'Hind', sans-serif;
+    grid-area: 2 / 1 / 2 / 2;
+}
+
+.topico{
+    
+    padding-top: 10px;
+    padding-left: 10px ;
+    margin-bottom: 0px;
+    width: 120px;
+    height: 35px;
+    border: none;
+    background-color: brown;
+    color: beige;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    box-shadow: 2px 1px rgb(81, 5, 5);
+}
+
+
+.topico:hover{
+    width: 150px;
+    background-color: rgb(81, 5, 5);
+    
+}
+
+.topico:active{
+    
+    transform: translate(0px,2px);
+}
+
+
+
+.noticias{
+    padding: 15px 15px ;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: bisque;
+    font-family: 'Hind', sans-serif;
+    overflow: auto;
+  
+}
+
+.destaque{
+    padding: 15px 15px ;
+    margin-top: 10px;
+    background-color:beige;
+    font-family: 'Hind', sans-serif;
+    grid-area: 2 / 3 / 2 / 4;
+
+}
+
+.img1, .img2{
+    margin-bottom: 15px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* Centralizar horizontalmente */
+    margin-bottom: 15px;
+}
+
+.servicos{
+    padding: 15px 15px ;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: antiquewhite;
+    font-family: 'Hind', sans-serif;
+    grid-area: 3 / 1 / 3 / 2;
+    overflow: auto;
+
+}
+
+.clima h2{
+    margin-bottom: -20px;
+    
+}
+
+.resultados{
+    padding: 15px 15px ;
+    min-width: 400px;
+    background-color: rgb(242, 242, 202);
+    font-family: 'Hind', sans-serif;
+    margin-top: 5px;
+    grid-area: 3 / 2 / 3 / 4;
+
+}
+
+.footer{
+    color: antiquewhite;
+    background-color:brown;
+    font-family: 'Playfair Display', serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+@media screen and (max-width: 500px){
+
+    .site {
+   
+        display: inline-block;
+        background-color:brown;
+        color:brown;
+        grid-template-columns: 1fr 1fr 20%;
+        grid-template-rows: 100px 400px 300px 50px;
+        
+     }
+
+        .menu{
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .noticias{
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .destaque{
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .img1, .img2{
+            
+            display: block;
+            width: 100%;
+            height: auto;
+            padding-bottom: 10px;    
+        }
+
+        .servicos{
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .resultados{
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+     
+     body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .footer{
+        color: antiquewhite;
+        background-color:brown;
+        font-family: 'Playfair Display', serif;
+        margin-top: 10px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+
+ 
+}
+
+}
