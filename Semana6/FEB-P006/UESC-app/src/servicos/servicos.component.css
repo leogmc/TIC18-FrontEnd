@@ -1,0 +1,13 @@
+@import '../shared-styles.css';
+
+.servicos{
+    
+    background-color: antiquewhite;
+    font-family: 'Hind', sans-serif; 
+
+}
+
+.clima h2{
+    margin-bottom: -20px;
+    
+}

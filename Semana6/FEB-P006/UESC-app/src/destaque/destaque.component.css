@@ -1,0 +1,18 @@
+@import '../shared-styles.css';
+
+
+.destaque{
+    
+    background-color:beige;
+    font-family: 'Hind', sans-serif;
+
+}
+
+.img1, .img2{
+    margin-bottom: 15px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* Centralizar horizontalmente */
+    margin-bottom: 15px;
+}

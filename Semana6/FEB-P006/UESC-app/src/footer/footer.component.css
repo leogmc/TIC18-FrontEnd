@@ -1,0 +1,15 @@
+@import '../shared-styles.css';
+
+.footer{
+   color: antiquewhite;
+   background-color:brown;
+   font-family: 'Playfair Display', serif;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   text-align: center;
+   
+}

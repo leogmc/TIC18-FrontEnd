@@ -1,0 +1,15 @@
+@import './shared-styles.css';
+
+hr{
+    border: none;
+    height: 3px;
+    background-color:rgb(234, 198, 154)
+}
+ 
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
