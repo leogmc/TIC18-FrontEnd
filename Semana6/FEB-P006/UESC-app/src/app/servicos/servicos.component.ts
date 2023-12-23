@@ -23,7 +23,7 @@ export class ServicosComponent {
 
   ngOnInit(): void {
     // Preenchendo o quadro "Serviços" com dados da API de previsão do tempo
-    const previsaoTempoAPI = 'https://api.openweathermap.org/data/2.5/weather?lat=-14.796611189986773&lon=-39.173822287008235&appid=c2d36d6ea27efa208a2ffbc6f6e35a2f&lang=pt_br';
+    const previsaoTempoAPI = 'https://api.openweathermap.org/data/2.5/weather?lat=-14.796611189986773&lon=-39.173822287008235&appid=c2d36d6ea27efa208a2ffbc6f6e35a2f&lang=pt_br&units=metric';
     this.buscarDadosDaAPI(previsaoTempoAPI)
       .then(data => {
         const servicosElemento = document.querySelector('.servicos p');
@@ -37,9 +37,9 @@ export class ServicosComponent {
           const temperatura = document.createElement('h2');
           const descricao = document.createElement('h3');
 
-          nome.textContent = `Cidade: ${data.name}`;
-          temperatura.textContent = `Temperatura: ${data.main.temp}°C`;
-          descricao.textContent = `Descrição: ${data.weather[0].description}`;
+          nome.textContent = ` ${data.name}`;
+          temperatura.textContent = `${data.main.temp}°C`;
+          descricao.textContent = `${data.weather[0].description}`;
 
           // Adicionando os elementos criados ao elemento pai (servicosElemento)
           servicosElemento.appendChild(nome);

@@ -1,0 +1,11 @@
+.noticias{
+    padding: 15px 15px ;
+    margin-top: 10px;
+    margin-right: 5px;
+    max-height:355px;
+    overflow: auto;
+    background-color: bisque;
+    font-family: 'Hind', sans-serif;
+   
+}
+

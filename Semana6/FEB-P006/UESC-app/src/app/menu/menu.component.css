@@ -1,10 +1,16 @@
-@import '../shared-styles.css';
 
 .menu {
 
+    height:355px;
+    flex-direction: column;
+    padding: 15px 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-right: 5px;
     background-color: antiquewhite;
     font-family: 'Hind', sans-serif;  
 }
+
 
 .topico{
     

@@ -1,73 +1,18 @@
-@import '../shared-styles.css';
 
-@media screen and (max-width: 500px){
-
-    .site {
-   
-        display: inline-block;
-        background-color:brown;
-        color:brown;
-        grid-template-columns: 1fr 1fr 20%;
-        grid-template-rows: 100px 400px 300px 50px;
-        
-     }
-
-        .menu{
-            margin-top: 10px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .noticias{
-            margin-top: 5px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .destaque{
-            margin-top: 5px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .img1, .img2{
-            
-            display: block;
-            width: 100%;
-            height: auto;
-            padding-bottom: 10px;    
-        }
-
-        .servicos{
-            margin-top: 5px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .resultados{
-            margin-top: 5px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 10px;
-        }
-     
-     body {
-        margin: 0;
-        padding: 0;
-        border: 0;
-    }
-
-    .footer{
-        color: antiquewhite;
-        background-color:brown;
-        font-family: 'Playfair Display', serif;
-        margin-top: 10px;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        text-align: center;
-
+.site-wrapper{
+    background-color:brown;
+    color:brown;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-template-rows: 400px 400px;
+    
+    
 }
+
+
