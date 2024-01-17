@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,12 +8,54 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'JReader';
+  dados: any;
+  file: File | undefined;
+  classes: string[] | undefined;
+  objetos: any[] = [];
+  nomes: string[] | undefined;
+  propriedades: any;
 
-  // Variável de controle para determinar se o componente deve ser exibido
-  componenteVisivel: boolean = false;
+  onFileSelected(event: any) {
+    this.file = (event.target as HTMLInputElement)?.files?.[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.dados = JSON.parse((e.target as FileReader).result as string);
+    };
 
-  // Método para ser chamado quando o botão for clicado
-  exibirComponente() {
-    this.componenteVisivel = true;
+    if (this.file) {
+      reader.readAsText(this.file);
+    } else {
+      console.error('No file selected');
+    }
+}
+
+  onLoad() {
+    if (this.file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = reader.result?.toString();
+        this.dados = JSON.parse(text || ''); 
+        this.classes = Object.keys(this.dados);
+      };
+      reader.readAsText(this.file);
+    }
+  }
+ 
+ 
+  onClasseSelecionada(event: { classe: string, objetos: any[] }) {
+    this.objetos = this.dados[event.classe];
+    this.nomes = this.objetos.map((objeto: any) => objeto.Name);
+    this.propriedades = null;
+  }
+  
+  
+  onObjetoSelecionado(objeto: any) {
+    this.nomes = this.objetos.map((objeto: any) => objeto.Name);
+    this.propriedades = objeto;
+    this.nomes = this.objetos.map((objeto: any) => objeto.Name);
+    this.classes = objeto;
+  }
+  onNomeSelecionado(nome: string) {
+    this.propriedades = this.objetos.find((objeto: any) => objeto.Name === nome);
   }
 }

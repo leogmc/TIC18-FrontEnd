@@ -1,17 +1,22 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-classes',
   templateUrl: './classes.component.html',
   styleUrl: './classes.component.css'
 })
-export class ClassesComponent {
+export class ClassesComponent implements OnInit {
 
-  @Input() listaVeiculos: any[] = [];
-  @Output() veiculoSelecionado = new EventEmitter<any>();
+  @Input() classes: any;
+  @Input() objetos: any[] = [];
+  @Output() classeSelecionada = new EventEmitter<{ classe: string, objetos: any[] }>();
 
-  selecionarClasse(objeto: any): void {
-    this.veiculoSelecionado.emit(objeto);
+  ngOnInit(): void {}
+
+
+  onSelect(classe: any) {
+    const objetosDaCategoria = this.classes[classe];
+    this.classeSelecionada.emit({ classe: classe, objetos: objetosDaCategoria });
   }
   
 

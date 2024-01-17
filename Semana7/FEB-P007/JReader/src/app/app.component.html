@@ -1,3 +1,7 @@
-<button (click)="exibirComponente()">Procurar...</button>
-
-<app-classes *ngIf="componenteVisivel"></app-classes>
+<!-- app.component.html -->
+<input type="file" (change)="onFileSelected($event)"/>
+<div class="container">
+  <app-classes [classes]="dados" (classeSelecionada)="onClasseSelecionada($event)"></app-classes>
+  <app-objetos [classe]="dados" [objetos]="objetos" (objetoSelecionado)="onObjetoSelecionado($event)"></app-objetos>
+  <app-propriedades [propriedades]="propriedades"></app-propriedades>
+</div>

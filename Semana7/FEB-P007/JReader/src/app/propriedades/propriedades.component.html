@@ -1,1 +1,9 @@
-<p>propriedades works!</p>
+<!-- propriedades.component.html -->
+<div *ngIf="propriedades">
+  <h2>Propriedades do Veículo</h2>
+  <ul>
+    <li *ngFor="let propriedade of propriedades | keyvalue">
+      {{propriedade.key}}: {{propriedade.value}}
+    </li>
+  </ul>
+</div>

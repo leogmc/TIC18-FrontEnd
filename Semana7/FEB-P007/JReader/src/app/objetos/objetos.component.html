@@ -1,1 +1,9 @@
-<p>objetos works!</p>
+<!-- objetos.component.html -->
+<div *ngIf="objetos && objetos.length > 0">
+    <h2>Veículos</h2>
+    <ul>
+      <li *ngFor="let objeto of objetos" (click)="onSelect(objeto)">
+        {{objeto.Name}}
+      </li>
+    </ul>
+  </div>
