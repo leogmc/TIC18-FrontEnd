@@ -1,8 +1,8 @@
 <!-- objetos.component.html -->
-<div *ngIf="objetos && objetos.length > 0">
-    <h2>Veículos</h2>
+<div *ngIf="objetos && objetos.length > 0" class="objetos">
+    <h2 class="titulo">Veículos</h2>
     <ul>
-      <li *ngFor="let objeto of objetos" (click)="onSelect(objeto)">
+      <li class="botao" *ngFor="let objeto of objetos" (click)="onSelect(objeto)">
         {{objeto.Name}}
       </li>
     </ul>

@@ -19,7 +19,9 @@
   /* Ajuste as propriedades conforme necessário para atender ao seu layout específico */
   app-classes,
   app-objetos,
-  app-propriedades {
+  app-propriedades,
+  app-valor-propriedade {
     margin: 10px;
     flex: 1;
+    max-width: 20%;
   }

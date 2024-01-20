@@ -1,0 +1,31 @@
+.valorPropriedade{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 30px 0px 20px;
+    background-color: bisque;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 10px; 
+}
+
+.valor{
+    
+    display: flex;
+    justify-content:center;
+    max-width: 80%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: cadetblue;
+}

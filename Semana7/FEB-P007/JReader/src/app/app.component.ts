@@ -14,6 +14,7 @@ export class AppComponent {
   objetos: any[] = [];
   nomes: string[] | undefined;
   propriedades: any;
+  propriedade: any;
 
   onFileSelected(event: any) {
     this.file = (event.target as HTMLInputElement)?.files?.[0];
@@ -41,21 +42,25 @@ export class AppComponent {
     }
   }
  
- 
+
   onClasseSelecionada(event: { classe: string, objetos: any[] }) {
     this.objetos = this.dados[event.classe];
-    this.nomes = this.objetos.map((objeto: any) => objeto.Name);
-    this.propriedades = null;
   }
   
   
   onObjetoSelecionado(objeto: any) {
     this.nomes = this.objetos.map((objeto: any) => objeto.Name);
     this.propriedades = objeto;
-    this.nomes = this.objetos.map((objeto: any) => objeto.Name);
     this.classes = objeto;
   }
-  onNomeSelecionado(nome: string) {
-    this.propriedades = this.objetos.find((objeto: any) => objeto.Name === nome);
-  }
+
+
+  onPropriedadeSelecionada( propriedade: string) {
+    this.propriedade = propriedade;
+   }
+
+
+
+
+
 }

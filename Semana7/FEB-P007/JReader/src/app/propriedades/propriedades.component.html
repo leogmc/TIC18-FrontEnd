@@ -1,9 +1,9 @@
 <!-- propriedades.component.html -->
-<div *ngIf="propriedades">
-  <h2>Propriedades do Veículo</h2>
+<div *ngIf="propriedades" class="propriedades">
+  <h2 class="titulo">Propriedades</h2>
   <ul>
-    <li *ngFor="let propriedade of propriedades | keyvalue">
-      {{propriedade.key}}: {{propriedade.value}}
+    <li class="botao" *ngFor="let propriedade of propriedades | keyvalue" (click)="onSelect(propriedade)" >
+      {{propriedade.key}} <!--{{propriedade.value}}-->
     </li>
   </ul>
 </div>
