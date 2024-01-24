@@ -1,2 +1,13 @@
-<app-search-bar></app-search-bar>
-<app-search-result></app-search-result>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+<div class="container">
+  <div class="header">
+  <h1 class="title">Consultando a Wiki API</h1>
+  <img class="gif" src="../assets/lupa.gif" alt="lupa">
+  </div>
+
+  <app-search (searchEvent)="search($event)"></app-search>
+  <app-article [articles]="articles" [selectedArticle]="selectedArticle"></app-article>
+</div>

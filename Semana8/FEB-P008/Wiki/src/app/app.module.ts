@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchBarComponent} from '../components/search-bar/search-bar.component'
-import { SearchResultComponent } from '../components/search-result/search-result.component';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ArticleComponent } from './components/article/article.component';
+import { HttpClient, HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent,
-    SearchResultComponent
+    SearchComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    [FormsModule]
+    HttpClientModule,
+    HttpClientJsonpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClient, HttpClientJsonpModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
