@@ -1,0 +1,21 @@
+<!-- directive formGroup -->
+<!-- directive formControlName -->
+<form [formGroup]="exemploForm" (ngSubmit)="onSubmit()">
+    <label for="login">Login:</label>
+    <input formControlName="login" name="login"> 
+    <br>
+   
+    <label> Senha: <input formControlName="senha">
+
+            <span *ngIf="!exemploForm.get('senha')?.valid &&
+            exemploForm.get('senha')?.touched">A senha deve conter pelo menos 8 caracteres</span>
+            <br>
+    </label>
+    
+    <button (click)="executarAcao()">Enviar</button>   
+</form>
+<hr>
+
+
+
+

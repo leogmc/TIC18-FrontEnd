@@ -1,0 +1,36 @@
+<h1>Formulário 2</h1>
+<br>
+<h2>Estação climática</h2>
+<form [formGroup]="exemploForm" (ngSubmit)="onSubmit()">
+
+    <label>Nome da estação:
+        <input formControlName="nomeEstacao" name="nomeEstacao">
+        <span *ngIf="!exemploForm.get('nomeEstacao')?.valid && exemploForm.get('nomeEstacao')?.touched">O campo não pode ser vazio</span>
+        <br>
+    </label>
+
+    <label> Email de notificação: 
+        <input formControlName="email" name="email">
+        <span *ngIf="!exemploForm.get('email')?.valid && exemploForm.get('email')?.touched">Insira um e-mail válido</span>
+        <br>
+    </label>
+
+    <label>Localização:
+        <input formControlName="localizacao" name="localizacao">
+        <span *ngIf="!exemploForm.get('localizacao')?.valid && exemploForm.get('localizacao')?.touched">O campo não pode ser vazio</span>
+        <br>
+    </label>
+
+    <label>Status de instalação:
+        <select formControlName="status" name="status">
+            <option> Não instalada </option>
+            <option> Instalada</option>
+            <option> Operante </option>
+        </select>
+        <span *ngIf="!exemploForm.get('status')?.valid && exemploForm.get('status')?.touched">O campo não pode ser vazio</span>
+        <br>
+    </label>
+
+    <button (click)="executarAcao()">Enviar</button>
+
+</form>
