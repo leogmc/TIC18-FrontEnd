@@ -1,0 +1,40 @@
+
+.menu {
+
+    height:355px;
+    flex-direction: column;
+    padding: 15px 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: antiquewhite;
+    font-family: 'Hind', sans-serif;  
+}
+
+
+.topico{
+    
+    padding-top: 10px;
+    padding-left: 10px ;
+    margin-bottom: 0px;
+    width: 120px;
+    height: 35px;
+    border: none;
+    background-color: brown;
+    color: beige;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    box-shadow: 2px 1px rgb(81, 5, 5);
+}
+
+
+.topico:hover{
+    width: 150px;
+    background-color: rgb(81, 5, 5);
+    
+}
+
+.topico:active{
+    
+    transform: translate(0px,2px);
+}

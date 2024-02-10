@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <!-- <mat-icon aria-hidden="false" aria-label="Home" fontIcon="home" class="home-icon" (click)="selecionarProjeto('home')">home</mat-icon> -->
+    <div class="projetos">
+      <mat-button routerLink="/uesc" (click)="selecionarProjeto('uesc')" [ngClass]="{'selecionado': 'uesc' === projetoSelecionado}">
+        UESC Angular
+      </mat-button>
+      <mat-button routerLink="/wiki" (click)="selecionarProjeto('wiki')" [ngClass]="{'selecionado': 'wiki' === projetoSelecionado}">
+        Wikipedia API
+      </mat-button>
+      <mat-button routerLink="/jreader" (click)="selecionarProjeto('jreader')" [ngClass]="{'selecionado': 'jreader' === projetoSelecionado}">
+        Airplane Dex
+      </mat-button>
+    </div>
+  </mat-toolbar>

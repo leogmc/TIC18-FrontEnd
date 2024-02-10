@@ -1,0 +1,27 @@
+/* app.component.css */
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Para centralizar os componentes horizontalmente */
+  }
+  
+  input[type="file"] {
+    margin-bottom: 10px; /* Adicione margem inferior para separar o input dos outros componentes */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Para distribuir os componentes horizontalmente */
+    width: 100%; /* Para garantir que os componentes ocupem toda a largura disponível */
+  }
+  
+  /* Ajuste as propriedades conforme necessário para atender ao seu layout específico */
+  app-classes,
+  app-objetos,
+  app-propriedades,
+  app-valor-propriedade {
+    margin: 10px;
+    flex: 1;
+    max-width: 20%;
+  }

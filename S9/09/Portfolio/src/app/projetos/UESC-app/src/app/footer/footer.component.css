@@ -1,0 +1,14 @@
+.footer{
+   grid-area: footer;
+   color: antiquewhite;
+   background-color:rgb(129, 19, 19);
+   font-family: 'Playfair Display', serif;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   text-align: center;
+   
+}
+

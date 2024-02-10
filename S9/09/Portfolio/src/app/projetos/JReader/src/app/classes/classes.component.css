@@ -1,0 +1,32 @@
+.classes{   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 50px 30px 0px 20px;
+    color: white;
+
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    
+}
+
+.botao{
+    
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    list-style: none;
+    max-width: 100px;
+    margin-top: 30px ;
+    margin-left: -30px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: cadetblue;
+}

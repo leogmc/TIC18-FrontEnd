@@ -1,0 +1,51 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(36, 0, 0);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgb(10, 0, 67) 100%);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  mat-icon.home-icon {
+    font-size: 24px;
+    margin-left: 2rem;
+  }
+  
+  .projetos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+  }
+  
+  mat-button {
+      --c: #1095c1; /* the color */
+      --s: .15em;
+      
+      line-height:1.1em;
+      padding-bottom: calc(2.1*var(--s));
+      background: 
+        conic-gradient(from 135deg at top,var(--c) 90deg,#0000 0) 
+          left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+        conic-gradient(from -45deg at bottom,var(--c) 90deg,#0000 0) 
+          left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0) 0/var(--_p,0%) padding-box no-repeat;
+      transition: .5s;
+    }
+  
+  
+  mat-button:hover, mat-icon:hover {
+    cursor: pointer;
+    --_p: 100%;
+    color: var(--c);
+  }
+  
+  mat-button.selecionado {
+    color: #1eb2fc;
+    font-stretch: narrower;
+  }

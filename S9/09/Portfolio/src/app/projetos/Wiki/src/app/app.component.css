@@ -1,0 +1,29 @@
+h1 {
+  color: #333;
+}
+
+div {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+input, button {
+  margin-bottom: 10px;
+}
+
+.title{
+  font-family: 'Caveat', cursive;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+}
+
+.gif{
+  max-width: 70px;
+  max-height: 70px;
+}
+
+
+

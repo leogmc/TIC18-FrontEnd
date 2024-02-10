@@ -1,0 +1,18 @@
+
+.site-wrapper{
+    background-color:brown;
+    color:brown;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-template-rows: 400px 400px;
+    
+    
+}
+
+
