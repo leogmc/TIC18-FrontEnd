@@ -2,6 +2,7 @@
 .title{
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     font-family: 'Montserrat', sans-serif;
 }
 .listas{
