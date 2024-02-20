@@ -1,0 +1,8 @@
+<!-- propriedades.component.html -->
+<div *ngIf="propriedade" class="valorPropriedade">
+    <h2 class="titulo">Valor</h2>
+      <p class="valor" *ngFor="let valor of propriedade | keyvalue">
+        {{valor.value}} 
+      </p>
+ 
+  </div>

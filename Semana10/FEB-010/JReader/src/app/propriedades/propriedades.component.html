@@ -1,0 +1,9 @@
+<!-- propriedades.component.html -->
+<div *ngIf="propriedades" class="propriedades">
+  <h2 class="titulo">Propriedades</h2>
+  <ul>
+    <li class="botao" *ngFor="let propriedade of propriedades | keyvalue" (click)="onSelect(propriedade)" >
+      {{propriedade.key}} <!--{{propriedade.value}}-->
+    </li>
+  </ul>
+</div>
