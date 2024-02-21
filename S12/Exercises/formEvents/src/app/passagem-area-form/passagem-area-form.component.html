@@ -1,0 +1,19 @@
+<form [formGroup]="bilheteAereoForm" (ngSubmit)="onSubmit()" class="flightTicket">
+
+    <input type="text" formControlName="NomePassageiro" placeholder="Nome do Passageiro" 
+    (focus)="onFocus()" (blur)="onBlur()" (change)="onChange($event)" (input)="onInput($event)">
+
+    <input type="text" formControlName="numeroVoo" placeholder="Número do Vôo">
+    <input type="date" formControlName="dataPartida" placeholder="Data de Partida">
+    <input type="date" formControlName="dataChegada" placeholder="Data de Chegada">
+    <input type="text" formControlName="aeroportoPartida" placeholder="Aeroporto de Partida">
+    <input type="text" formControlName="aeroportoChegada" placeholder="Aeroporto de Chegada">
+    <button type="submit">Enviar</button>
+  </form>
+  <hr>
+  <h3>Quadro de Eventos <br/> Nome do passageiro <br/>
+    focus/blur: {{fOnFocus}}<br/>
+    change: {{fonChange}}<br/>
+    nomeDoPassageiro: {{nomeDoPassageiro}}<br/>  
+    temp Nome do Passageiro: {{tempNomePassageiro}}<br/>
+    </h3>

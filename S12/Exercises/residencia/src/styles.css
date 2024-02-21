@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:blanchedalmond;
+    width: 100%;
+    height: 100px;
+    border-bottom: 5px solid chocolate;
+}
+
+.form-adicionar{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size:larger;
+    background-color:darksalmon;
+    color: white;
+    padding: 20px;
+    margin: 50px;
+    border: 30px;
+    border-radius: 5px;  
+}
+
+.listar{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size:larger;
+    background-color:darksalmon;
+    color: white;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 5px;  
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-top: 5px solid chocolate;
+    width: 100%;
+    background-color: bisque;
+    position:absolute;
+    bottom: 0;
+}

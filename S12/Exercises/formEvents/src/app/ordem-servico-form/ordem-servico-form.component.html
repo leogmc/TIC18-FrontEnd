@@ -1,0 +1,13 @@
+<form [formGroup]="ordemDeServicoForm" (ngSubmit)="onSubmit()"  class="ordemServico">
+    <input type="text" formControlName="nomeCliente" placeholder="Nome do Cliente">
+    <input type="text" formControlName="tipoServico" placeholder="Tipo de Serviço">
+    <input type="date" formControlName="dataOrdem">
+    <textarea formControlName="detalhes" placeholder="Detalhes"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <hr>
+  <button (click)="inscricaoValueChanges()">inscricao ValueChanges</button><br>
+  <button (click)="inscricaoStatusChanges()">inscricao StatusChanges</button><br>
+
+  <input [(ngModel)]="nomeDoConsumidor" (ngModelChange)="onNomeDoConsumidorChange()" 
+  placeholder="Nome do Consumidor">
