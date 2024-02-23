@@ -1,1 +1,15 @@
-<p>listar works!</p>
+<h1 class="titulo">Lista de carros cadastrados</h1>
+<div class="lista">
+    <ol>
+        <li *ngFor="let info of informacoes$ | async">
+        <p>Marca: {{ info.marca }}</p>
+        <p>Modelo: {{ info.modelo }}</p>
+        <p>Ano: {{ info.ano }}</p>
+        <p>Valor: {{ info.valor }}</p>
+        <p>Cor: {{ info.cor }}</p>
+        <p>Foto: {{ info.foto }}</p>
+        <hr class="divisao">
+        </li>
+    </ol>
+</div>
+  

@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos toda a altura da viewport */
 }
 
 .header{
@@ -25,6 +26,11 @@ body, html {
     border-radius: 5px;  
 }
 
+.form-adicionar:hover{
+    transition-duration: 10ms;
+    background-color: chocolate;
+}
+
 .listar{
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
@@ -33,10 +39,17 @@ body, html {
     color: white;
     padding: 20px;
     margin: 50px;
+    margin-bottom: 30px;
     border-radius: 5px;  
 }
 
+.listar:hover{
+    transition-duration: 10ms;
+    background-color: chocolate;
+}
+
 .content{
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço restante na vertical */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,6 +65,7 @@ body, html {
     border-top: 5px solid chocolate;
     width: 100%;
     background-color: bisque;
-    position:absolute;
+    position:fixed;
     bottom: 0;
+    left: 0;
 }

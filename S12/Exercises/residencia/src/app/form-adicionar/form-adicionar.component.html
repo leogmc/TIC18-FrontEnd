@@ -2,26 +2,26 @@
 <h1 class="form"> Formulário</h1>
 <div class="formulario">
    
-    <form>
+    <form [formGroup]="cadastroDeCarroForm" (ngSubmit)="onSubmit()" class="cadastroCarro">
     <label>Marca:</label>
-    <input class="marca" name="marca">
+    <input class="marca" formControlName="marca">
     <br>
     <label>Modelo:</label>
-    <input class="modelo" name="modelo">
+    <input class="modelo" formControlName="modelo">
     <br>
     <label>Ano:</label>
-    <input class="ano" name="ano">
+    <input class="ano" formControlName="ano">
     <br>
     <label>Valor:</label>
-    <input class="valor" name="valor">
+    <input class="valor" formControlName="valor">
     <br>
     <label>Cor:</label>
-    <input class="cor" type="color" name="cor">
+    <input class="cor" type="color" formControlName="cor">
     <br>
     <label>Foto:</label>
-    <input class="foto" type="file" name="foto">
+    <input class="foto" type="file" formControlName="foto">
     <br>
-    <button class="botao"> Enviar </button>
+    <button class="botao" type="submit"> Enviar </button>
 
 
 </form>

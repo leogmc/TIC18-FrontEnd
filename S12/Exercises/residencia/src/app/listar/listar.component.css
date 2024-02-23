@@ -1,0 +1,31 @@
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;
+}
+
+.lista{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 20px;
+    background-color:blanchedalmond;
+    border-radius: 10px;
+    border: 2px solid chocolate;
+    margin-bottom: 100px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;  
+}
+
+ol{
+    list-style: upper-roman;
+    color: chocolate; 
+}
+
+.divisao{
+   background-color: chocolate;
+   height: 2px;
+}
