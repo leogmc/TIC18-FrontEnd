@@ -1,0 +1,16 @@
+<div class="container"><div class="formulario" *ngIf="formData">
+    <p>Nome de usuário: {{ formData.nomeUsuario }}</p>
+    <p>Senha: {{ formData.senha }}</p>
+    <p>Email: {{ formData.email }}</p>
+    <p>Nome completo: {{ formData.nome }}</p>
+    <p>Telefone: {{ formData.telefone }}</p>
+    <p>Endereço: {{ formData.endereco }}</p>
+    <p>Data de Nascimento: {{ formData.dataNascimento }}</p>
+    <p>Gênero: {{ formData.genero }}</p>
+    <p>Profissão: {{ formData.profissao }}</p>
+  </div>
+  <div *ngIf="formStatus">
+    <p>Status do formulário: {{ formStatus }}</p>
+  </div>
+</div> 
+  

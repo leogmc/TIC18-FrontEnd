@@ -1,0 +1,15 @@
+.formulario {
+    border: solid rgb(40, 46, 133);
+    background-color:rgb(203, 206, 255) ; 
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+p{
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(40, 46, 133);   
+}

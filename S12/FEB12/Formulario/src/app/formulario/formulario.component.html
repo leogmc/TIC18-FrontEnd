@@ -1,0 +1,143 @@
+<div class="container">
+<h2 class="titulo">Formulário do Usuário</h2>
+<form class="formulario" [formGroup]="exemploForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="form">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="nomeUsuario" name="nomeUsuario" placeholder="Username">
+          <div>
+            <span class="span" *ngIf="!exemploForm.get('nomeUsuario')?.valid && exemploForm.get('nomeUsuario')?.touched">
+            * O campo não deve conter espaços <br>
+            * Máx. de caracteres: 12 <br>
+            * O campo não pode ser vazio 
+            </span>
+        </div>
+        </mat-form-field>
+          
+        <mat-form-field class="form">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="senha" name="senha" placeholder="****">
+            <div>
+                <span class="span" *ngIf="!exemploForm.get('senha')?.valid && exemploForm.get('senha')?.touched">
+                    * A senha deve conter no mínimo 4 caracteres <br>
+                    * A senha deve incluir pelo menos uma letra maiúscula ex:(A,F,Z...) <br>
+                    * A senha deve incluir pelo menos um simbolo ex:(*,&..) <br>
+                </span>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Email</mat-label>
+        <input matInput formControlName="email" name="email" placeholder="example@email.com">
+            <div>
+                <span class="span" *ngIf="!exemploForm.get('email')?.valid && exemploForm.get('email')?.touched">
+                    * Insira um e-mail válido
+                </span>
+            </div>
+        </mat-form-field>
+
+
+
+        <mat-form-field class="form">
+            <mat-label>Nome completo</mat-label>
+        <input matInput formControlName="nome" name="nome" placeholder="Nome Sobrenome">
+            <div>
+                <span class="span" *ngIf="!exemploForm.get('nome')?.valid && exemploForm.get('nome')?.touched">
+                    * Insira um nome e sobrenome
+                </span>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telefone" name="telefone" placeholder="(xx) xxxx-xxxx">
+            <div>
+                <span class="span"  *ngIf="!exemploForm.get('telefone')?.valid && exemploForm.get('telefone')?.touched">
+                    * Insira um número de telefone válido (xx xxxx-xxxx ou (xx) xxxx-xxxx)
+                </span>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Endereço</mat-label>
+        <input matInput formControlName="endereco" name="endereco" placeholder="Ex: Rua A, 100, Bairro B, Cidade C - Estado ES">
+            <div>
+                <span class="span" *ngIf="!exemploForm.get('endereco')?.valid && exemploForm.get('endereco')?.touched">
+                    * Insira um endereço válido (Ex: Rua A, 100, Bairro B, Cidade C - Estado ES)
+                </span>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Data de nascimento</mat-label> 
+        <input matInput formControlName="dataNascimento" name="dataNascimento" placeholder="(dd/mm/aaaa)">
+            <div>
+                <span class="span" *ngIf="!exemploForm.get('dataNascimento')?.valid && exemploForm.get('dataNascimento')?.touched">
+                    * Insira uma data de nascimento válida (dd/mm/aaaa) <br>
+                    * O usuário deve possuir mais de 18 anos
+                </span>
+            </div>
+        </mat-form-field>
+
+
+    <mat-form-field>
+        <mat-label>Gênero</mat-label>
+            <select matNativeControl required formControlName="genero" name="genero">
+                <option> Prefiro não informar </option>
+                <option> Masculino</option>
+                <option> Feminino </option>
+            </select>
+                <div>
+                    <span class="span" *ngIf="!exemploForm.get('genero')?.valid && exemploForm.get('genero')?.touched">
+                        * O campo não pode ser vazio
+                    </span>
+                </div>
+    </mat-form-field>
+
+    <mat-form-field class="profissao">
+        <mat-label>Profissão</mat-label>
+        <select matNativeControl required formControlName="profissao" name="profissao" placeholder="Ex: Professor">
+            <option> Estudante </option>
+            <option> Médico </option>
+            <option> Professor </option>
+            <option> Engenheiro </option>
+            <option> Advogado </option>
+            <option> Programador </option>
+            <option> Enfermeiro </option>
+            <option> Designer </option>
+            <option> Arquiteto </option>
+            <option> Contador </option>
+            <option> Jornalista </option>
+            <option> Administrador </option>
+            <option> Vendedor </option>
+            <option> Analista de Sistemas </option>
+            <option> Consultor </option>
+            <option> Psicólogo </option>
+            <option> Técnico de Informática </option>
+            <option> Gerente </option>
+            <option> Farmacêutico </option>
+            <option> Eletricista </option>
+            <option> Outra profissão </option>
+        </select>
+        <div>
+            <span class="span" *ngIf="!exemploForm.get('profissao')?.valid && exemploForm.get('profissao')?.touched">
+                * O campo não pode ser vazio
+            </span>
+        </div>
+    </mat-form-field>
+
+  <br>
+    
+
+    <button class="botao" (click)="executarAcao()">Enviar</button>
+
+</form>
+
+</div>
+
+<!-- Mostra o componente apenas quando o botão Enviar for clicado-->
+<ng-container *ngIf="mostrarOtherComponent">
+    <app-other-component></app-other-component>
+  </ng-container>
+
+
