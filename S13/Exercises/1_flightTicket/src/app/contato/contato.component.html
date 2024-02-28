@@ -1,0 +1,6 @@
+<form [formGroup]="formContato" (ngSubmit)="onSubmit()" class="contato">
+      <input type="text" formControlName="nome" placeholder="Nome">
+      <input type="email" formControlName="email" placeholder="Email">
+      <textarea formControlName="mensagem" placeholder="Deixe uma mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>

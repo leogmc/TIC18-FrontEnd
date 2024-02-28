@@ -1,0 +1,25 @@
+<p *ngIf="loadedTickets.length < 1">Não existem passagens cadastradas!</p>
+<table class="tickets-table" *ngIf="loadedTickets.length >=1">
+    <thead>
+      <tr>
+        <th>Nome do passageiro: </th>
+        <th>Número do vôo</th>
+        <th>Data da partida: </th>
+        <th>Data da chegada: </th>
+        <th>Aeroporto de Partida: </th>
+        <th>Aeroporto de Chegada: </th>
+        <th><button (click)="apagarTudo()">Apagar Tudo</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of loadedTickets">
+        <td>{{ ticket.NomePassageiro }}</td>
+        <td>{{ ticket.numeroVoo }}</td>
+        <td>{{ ticket.dataPartida }}</td>
+        <td>{{ ticket.dataChegada }}</td>
+        <td>{{ ticket.aeroportoPartida }}</td>
+        <td colspan="1">{{ ticket.aeroportoChegada }}</td>
+        <td><button type="button" class="btnEditar" routerLink="/editarTicket/{{ticket.id}}">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>

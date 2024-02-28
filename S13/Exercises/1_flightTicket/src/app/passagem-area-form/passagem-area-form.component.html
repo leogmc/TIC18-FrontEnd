@@ -1,0 +1,9 @@
+<form [formGroup]="bilheteAereoForm" (ngSubmit)="adicionarBilhete()" class="flightTicket">
+    <input type="text" formControlName="NomePassageiro" placeholder="Nome do Passageiro">
+    <input type="text" formControlName="numeroVoo" placeholder="Número do Vôo">
+    <input type="date" formControlName="dataPartida" placeholder="Data de Partida">
+    <input type="date" formControlName="dataChegada" placeholder="Data de Chegada">
+    <input type="text" formControlName="aeroportoPartida" placeholder="Aeroporto de Partida">
+    <input type="text" formControlName="aeroportoChegada" placeholder="Aeroporto de Chegada">
+    <button type="submit">Enviar</button>
+  </form>

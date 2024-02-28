@@ -1,0 +1,34 @@
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  }
+  
+  .tickets-table th,
+  .tickets-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .tickets-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .tickets-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+  }
+
+  .btnEditar{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

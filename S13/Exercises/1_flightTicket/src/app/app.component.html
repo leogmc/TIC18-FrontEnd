@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="header">
+        <div class="logo">CRUD</div>    
+        <div class="nav-links">
+            <a routerLink="/principal" routerLinkActive="active">Home</a>
+            <a routerLink="/adicionaTicket" routerLinkActive="active">Adicionar</a>
+            <a routerLink="/listarTicket" routerLinkActive="active">Listar</a>
+            <a routerLink="/contato" routerLinkActive="active">Contato</a>
+        </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Residência. Todos os direitos reservados. <a href="#">Política de Privacidade</a> | <a href="#">Termos do serviço</a></p>
+    </div>
+  </div>

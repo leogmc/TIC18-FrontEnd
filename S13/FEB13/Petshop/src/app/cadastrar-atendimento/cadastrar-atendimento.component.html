@@ -1,0 +1,46 @@
+<!-- app.component.html -->
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Formulário de Atendimento</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="submitForm()" #atendimentoForm="ngForm">
+        <!-- Informações do Cliente -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nome do Cliente</mat-label>
+          <input matInput name="nomeCliente" ngModel required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" name="emailCliente" ngModel required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Telefone</mat-label>
+          <input matInput name="telefoneCliente" ngModel required>
+        </mat-form-field>
+  
+        <!-- Informações do Animal -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nome do Animal</mat-label>
+          <input matInput name="nomeAnimal" ngModel required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Espécie</mat-label>
+          <input matInput name="especieAnimal" ngModel required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Raça</mat-label>
+          <input matInput name="racaAnimal" ngModel required>
+        </mat-form-field>
+        
+        <!-- Descrição do Atendimento -->
+        <mat-form-field appearance="fill">
+          <mat-label>Descrição do Atendimento</mat-label>
+          <textarea matInput name="descricaoAtendimento" ngModel required></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="atendimentoForm.invalid">Enviar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
