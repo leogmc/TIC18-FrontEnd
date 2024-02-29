@@ -1,1 +1,21 @@
-<p>listar-atendimentos works!</p>
+<p *ngIf="loadedAtendimentos.length < 1">Não existem atendimentos cadastrados!</p>
+<table class="tickets-table" *ngIf="loadedAtendimentos.length >=1">
+    <thead>
+      <tr>
+        <th>Nome do cliente: </th>
+        <th>Nome do animal: </th>
+        <th>Espécie: </th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let atendimento of loadedAtendimentos">
+        <td>{{ atendimento.nomeCliente}}</td>
+        <td>{{ atendimento.nomeAnimal}}</td>
+        <td>{{ atendimento.especieAnimal }}</td>
+        <td style="text-align: right;"><button type="button" id="btnEditar" routerLink="/editarAtendimento/{{atendimento.id}}">Editar</button></td>
+        <td><button type="button" id="btnDetalhes" routerLink="/detalharAtendimento//{{atendimento.id}}">Exibir detalhes</button></td>
+      </tr>
+    </tbody>
+  </table>

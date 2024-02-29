@@ -14,18 +14,6 @@ export class EditarTicketComponent {
   id:string = '';
   editadoSucesso:boolean = false;
 
-  /*
-   constructor(
-    private booksService: BooksService,
-    private route: ActivatedRoute,
-    private router: Router) { }
-
-  ngOnInit(): void {
-    this.message = '';
-    this.getBook(this.route.snapshot.paramMap.get('id'));
-  }
-  */
-
   constructor(private formConstrutor: FormBuilder, private bancoService:DataBaseService, private rotas:Router, private route: ActivatedRoute) { }
 
   ngOnInit() {

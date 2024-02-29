@@ -8,6 +8,8 @@ import { EditarAtendimentoComponent } from './editar-atendimento/editar-atendime
 import { CadastrarAtendimentoComponent } from './cadastrar-atendimento/cadastrar-atendimento.component';
 import { DetalharAtendimentoComponent } from './detalhar-atendimento/detalhar-atendimento.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 
 //Imports da biblioteca Material
 import { MatInputModule } from '@angular/material/input';
@@ -25,7 +27,7 @@ import { RouterModule, Routes } from '@angular/router';
     { path: 'cadastrarAtendimento', component: CadastrarAtendimentoComponent },
     { path: 'listarAtendimentos', component: ListarAtendimentosComponent },
     { path: 'editarAtendimento/:id', component: EditarAtendimentoComponent},
-    { path: 'detalharAtendimento/id', component: DetalharAtendimentoComponent },
+    { path: 'detalharAtendimento/:id', component: DetalharAtendimentoComponent },
     { path: '', redirectTo: '/cadastrarAtendimento', pathMatch: 'full' },
   ];
 
@@ -51,6 +53,8 @@ import { RouterModule, Routes } from '@angular/router';
     MatRadioModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
 
   ],
