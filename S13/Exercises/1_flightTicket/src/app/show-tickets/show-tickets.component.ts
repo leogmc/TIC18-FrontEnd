@@ -18,7 +18,7 @@ export class ShowTicketsComponent implements OnInit{
 
 
   getTickets() {
-    this.bancoService.getTickets().subscribe(responseData => {
+    this.bancoService.getTickets().subscribe((responseData: Ticket[]) => {
       console.log(responseData);
       this.loadedTickets = responseData;
       console.log(this.loadedTickets);
