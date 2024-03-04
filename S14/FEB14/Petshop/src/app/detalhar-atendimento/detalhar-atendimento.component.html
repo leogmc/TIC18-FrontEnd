@@ -1,0 +1,23 @@
+<!-- detalhar-atendimento.component.html -->
+
+<div class="formulario" *ngIf="atendimentoDetails">
+    <h2>Detalhes do Atendimento</h2>
+    
+      <strong>Nome do Cliente:</strong> {{ atendimentoDetails.nomeCliente }}
+      <br>
+      <strong>Email:</strong> {{ atendimentoDetails.email }}
+      <br>
+      <strong>Nome do Animal:</strong> {{ atendimentoDetails.nomeAnimal }}
+      <br>
+      <strong>Espécie:</strong> {{ atendimentoDetails.especieAnimal }}
+      <br>
+      <strong>Raça:</strong> {{ atendimentoDetails.racaAnimal }}
+      <br>
+      <strong>Descrição do Atendimento:</strong> {{ atendimentoDetails.descricaoAtendimento }}
+  
+  </div>
+  
+  <div *ngIf="!atendimentoDetails">
+    <p>Carregando detalhes do atendimento...</p>
+  </div>
+  

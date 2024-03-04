@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Fabricante</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Garantia</th>
+          <th scope="col">Observações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let peca of loadedPecas">
+          <td>{{peca.nome}}</td>
+          <td>{{peca.fabricante}}</td>
+          <td>{{peca.marca}}</td>
+          <td>{{peca.modelo}}</td>
+          <td>{{peca.preco}}</td>
+          <td>{{peca.garantia}}</td>
+          <td>{{peca.observacoes}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

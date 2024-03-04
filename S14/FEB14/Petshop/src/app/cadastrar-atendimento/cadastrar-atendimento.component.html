@@ -1,0 +1,58 @@
+<div class="formulario">
+  <mat-card>
+
+    <mat-card-header>
+      <mat-card-title>Formulário de Atendimento</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form (ngSubmit)="addAtendimento(atendimentoForm)" #atendimentoForm="ngForm">
+
+        <!-- Informações do Cliente -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nome do Cliente</mat-label>
+          <input matInput name="nomeCliente" ngModel required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field id="email" appearance="fill">
+          <mat-label >Email</mat-label>
+          <input matInput type="email" name="email" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="telefone" appearance="fill">
+          <mat-label>Telefone</mat-label>
+          <input matInput name="telefone" ngModel required>
+        </mat-form-field>
+        
+
+        <!-- Informações do Animal -->
+        <mat-form-field id="nomeAnimal" appearance="fill">
+          <mat-label>Nome do Animal</mat-label>
+          <input matInput name="nomeAnimal" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="especieAnimal" appearance="fill">
+          <mat-label>Espécie</mat-label>
+          <input matInput name="especieAnimal" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="racaAnimal" appearance="fill">
+          <mat-label>Raça</mat-label>
+          <input matInput name="racaAnimal" ngModel required>
+        </mat-form-field>
+        
+        <!-- Descrição do Atendimento -->
+        <mat-form-field class="descricao" appearance="fill">
+          <mat-label>Descrição do Atendimento</mat-label>
+          <textarea matInput name="descricaoAtendimento" ngModel required></textarea>
+        </mat-form-field>
+        <br>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="atendimentoForm.invalid">Enviar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+  

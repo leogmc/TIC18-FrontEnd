@@ -1,0 +1,39 @@
+<form [formGroup]="pecaForm" (ngSubmit)="adicionarPeca()" class="m-3">
+  
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" formControlName="nome" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="fabricante">Fabricante:</label>
+      <input type="text" id="fabricante" formControlName="fabricante" class="form-control">
+    </div>
+  
+      <div class="form-group">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" formControlName="marca" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" formControlName="modelo" class="form-control">
+      </div>
+  
+    <div class="form-group">
+      <label for="preco">Preço:</label>
+      <input type="text" id="preco" formControlName="preco" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="garantia">Garantia:</label>
+      <input type="text" id="garantia" formControlName="garantia" class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" formControlName="observacoes" class="form-control"></textarea>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

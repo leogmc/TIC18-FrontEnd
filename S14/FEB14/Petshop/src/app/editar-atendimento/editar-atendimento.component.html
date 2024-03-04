@@ -1,0 +1,53 @@
+<div class="formulario">
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Editar dados de Atendimento</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="atendimentoForm" (ngSubmit)="salvarAtendimento()" >
+        <!-- Informações do Cliente -->
+
+        <mat-form-field appearance="fill">
+          <mat-label>Nome do Cliente</mat-label>
+          <input matInput formControlName="nomeCliente" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="email" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="telefone" appearance="fill">
+          <mat-label>Telefone</mat-label>
+          <input matInput formControlName="telefone" ngModel required>
+        </mat-form-field>
+  
+        <!-- Informações do Animal -->
+        <mat-form-field id="nomeAnimal" appearance="fill">
+          <mat-label>Nome do Animal</mat-label>
+          <input matInput formControlName="nomeAnimal" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="especieAnimal" appearance="fill">
+          <mat-label>Espécie</mat-label>
+          <input matInput formControlName="especieAnimal" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field id="racaAnimal" appearance="fill">
+          <mat-label>Raça</mat-label>
+          <input matInput formControlName="racaAnimal" ngModel required>
+        </mat-form-field>
+        
+        <!-- Descrição do Atendimento -->
+        <mat-form-field appearance="fill">
+          <mat-label>Descrição do Atendimento</mat-label>
+          <textarea matInput formControlName="descricaoAtendimento" ngModel required></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="atendimentoForm.invalid">Salvar</button>
+        <span *ngIf="editadoSucesso">Formulário Editado com sucesso!</span>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
