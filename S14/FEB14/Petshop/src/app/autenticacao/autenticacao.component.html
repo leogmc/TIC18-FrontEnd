@@ -22,7 +22,9 @@
               <input type="password" class="form-control" id="inputPassword" name="inputPassword" ngModel>
             </div>
             <div>
-              <button class="btn btn-primary" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' : 'Inscrever-se'}}</button>|
+              <button class="btn btn-primary" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' : 'Inscrever-se'}}</button>
+              <br>
+              <br>
               <button class="btn btn-primary" (click)="onTrocarModo()" type="button">{{ modoLogin ? 'Inscrever-se': 'Login' }}</button>
             </div>
           </form>
