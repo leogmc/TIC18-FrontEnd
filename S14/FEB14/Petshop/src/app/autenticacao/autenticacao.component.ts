@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AutenticaService } from '../autentica.service';
@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class AutenticacaoComponent {
 
+
   modoLogin = true;
   estaCarregando = false;
   erro: string = '';
@@ -18,6 +19,8 @@ export class AutenticacaoComponent {
 
   constructor(private authService: AutenticaService,
               private router:Router) { }
+
+             
 
   onTrocarModo() {
     this.modoLogin = !this.modoLogin;
@@ -36,8 +39,9 @@ export class AutenticacaoComponent {
     const password = formulario.value.inputPassword;
   
     this.estaCarregando = true;
-  
+
     let authObservable: Observable<any>;
+
   
     if (this.modoLogin) {
       authObservable = this.authService.loginUser(email, password);
@@ -51,6 +55,8 @@ export class AutenticacaoComponent {
         this.estaCarregando = false;
         this.temErro = false;
         this.router.navigate(['/cadastrarAtendimento']);
+        //Altera o estado de autenticação
+        this.authService.setAutenticado(true);
       },
       error: error => {
         console.log(error);

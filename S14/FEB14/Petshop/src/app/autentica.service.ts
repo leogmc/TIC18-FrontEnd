@@ -18,6 +18,24 @@ interface AuthResponseData {
 })
 export class AutenticaService {
 
+   //COMPARTILHA O ESTADO DE AUTENTICAÇÃO ------------------------------(
+
+  private estaAutenticadoSubject = new BehaviorSubject<boolean>(false);
+  estaAutenticado$ = this.estaAutenticadoSubject.asObservable();
+
+  // Método para definir o estado de autenticação
+  setAutenticado(autenticado: boolean) {
+    this.estaAutenticadoSubject.next(autenticado);
+  }
+
+  // Método para obter o estado de autenticação atual
+  getAutenticado(): boolean {
+    return this.estaAutenticadoSubject.value;
+  }
+
+   //COMPARTILHA O ESTADO DE AUTENTICAÇÃO ------------------------------)
+
+
   usuario = new BehaviorSubject<Usuario>(new Usuario('', '', '', new Date()));
 
   constructor(private http: HttpClient) { }

@@ -1,9 +1,10 @@
 <div class="container">
   <div class="header">
       <div class="logo">PetShop</div>    
-      <div class="nav-links">
-          <a routerLink="/cadastrarAtendimento" routerLinkActive="active">Cadastro</a>
-          <a routerLink="/listarAtendimentos" routerLinkActive="active">Listar</a>
+      <div class="nav-links" *ngIf="estaAutenticado">
+         <!-- Verifica se o usuário está logado antes de renderizar os links de navegação -->
+      <a routerLink="/cadastrarAtendimento" routerLinkActive="active">Cadastro</a>
+      <a routerLink="/listarAtendimentos" routerLinkActive="active">Listar</a>
       </div>
   </div>
   <div class="content">
