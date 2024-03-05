@@ -1,5 +1,4 @@
 <div class="formulario">
-
   <div class="row justify-content-center mt-5">
     <div class="col-md-3">
       <div class="card">
@@ -7,25 +6,31 @@
           Autenticação
         </div>
         <div class="card-body">
-          <form>
+          <div class="alert alert-danger" *ngIf="temErro">
+            {{erro}}
+          </div>
+          <div *ngIf="estaCarregando">
+            <app-loading-spinner></app-loading-spinner>
+          </div>
+          <form #autenticaForm="ngForm" (ngSubmit)="onSubmit(autenticaForm)" *ngIf="!estaCarregando">
             <div class="mb-3">
               <label for="inputEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="inputEmail" ngModel>
             </div>
             <div class="mb-3">
               <label for="inputPassword" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="inputPassword">
+              <input type="password" class="form-control" id="inputPassword" name="inputPassword" ngModel>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <div>
+              <button class="btn btn-primary" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' : 'Inscrever-se'}}</button>|
+              <button class="btn btn-primary" (click)="onTrocarModo()" type="button">{{ modoLogin ? 'Inscrever-se': 'Login' }}</button>
+            </div>
           </form>
-        </div>
-        <div class="card-footer">
-          <p class="text-center">Não possui uma conta? <a href="#">Cadastre-se aqui</a></p>
         </div>
       </div>
     </div>
   </div>
-
 </div>
+
 
 

@@ -9,7 +9,9 @@ import { CadastrarAtendimentoComponent } from './cadastrar-atendimento/cadastrar
 import { DetalharAtendimentoComponent } from './detalhar-atendimento/detalhar-atendimento.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 //Imports da biblioteca Material
 import { MatInputModule } from '@angular/material/input';
@@ -22,7 +24,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
-import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
+import { AutenticaInterceptor } from './autentica.interceptor';
+
 
   const routes: Routes = [
     { path: 'cadastrarAtendimento', component: CadastrarAtendimentoComponent },
@@ -41,7 +44,8 @@ import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
     EditarAtendimentoComponent,
     CadastrarAtendimentoComponent,
     DetalharAtendimentoComponent,
-    AutenticacaoComponent
+    AutenticacaoComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
 
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {provide: HTTP_INTERCEPTORS, useClass: AutenticaInterceptor, multi : true}
   ],
   bootstrap: [AppComponent]
 })
